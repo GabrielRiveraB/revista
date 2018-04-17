@@ -15,7 +15,7 @@
 
 <div class="notes index large-9 medium-8 columns content">
     <h3><?= __('Notas disponibles') ?></h3>
-    
+
 <div class="table-responsive custom">
     <table class="table table-hover table-responsive">
         <thead>
@@ -23,11 +23,11 @@
                 <th scope="col"><?= $this->Paginator->sort('id') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('name',['label'=>'Titulo de la Nota']) ?></th>
                 <th scope="col"><?= $this->Paginator->sort('date',['label'=>'Publicada']) ?></th>
-                <!-- 
+                <!--
                 <th scope="col"><?= $this->Paginator->sort('bullets') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('created') ?></th>
                 <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
- 
+
                 -->
                 <th scope="col"><?= $this->Paginator->sort('magazine_id',['label'=>'Revista']) ?></th>
                 <th scope="col" class="actions"><?= __('Acción') ?></th>
@@ -39,7 +39,7 @@
                 <td><?= $this->Number->format($note->id) ?></td>
                 <td><?=  $this->Html->link($note->name, ['action' => 'view', $note->id]) ?></td>
                 <td><?= h($note->date) ?></td>
-                <!-- 
+                <!--
                 <td><?= h($note->bullets) ?></td>
                 <td><?= h($note->created) ?></td>
                 <td><?= h($note->modified) ?></td>
@@ -84,4 +84,3 @@
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>
-
